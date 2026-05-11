@@ -1,0 +1,8 @@
+METHOD findGame(searchName)
+    FOR each Game g in games list
+        IF g.getName matches searchName (ignoring case)
+            RETURN g
+        END IF
+    END FOR
+    RETURN null
+END METHOD
