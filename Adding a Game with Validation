@@ -1,0 +1,24 @@
+METHOD addNewGameUI()
+    PRINT "Enter Game Name"
+    READ name
+    
+    SET validGenre = false
+    WHILE validGenre is false
+        PRINT Genre Options (ACTION, RPG, etc.)
+        READ gChoice
+        IF gChoice is valid
+            SET genre = Selected Enum
+            SET validGenre = true
+        ELSE
+            PRINT "Invalid choice. Try again."
+        END IF
+    END WHILE
+
+    CREATE newGame(name, genre, platform, ageRating)
+    PRINT "Enter Review Score"
+    READ score
+    newGame.setRating(score)
+    
+    library.addGame(newGame)
+    PRINT "Successfully added"
+END METHOD
